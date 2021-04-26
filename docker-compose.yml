@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  sftp-demo:
+    image: atmoz/sftp:alpine
+    restart: always
+    volumes:
+      - /atmoz/upload:/home/sftp/upload
+    ports:
+      - "24022:22"
+    command: atmoz:atmoz124:::atmoz

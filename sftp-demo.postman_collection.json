@@ -1,0 +1,52 @@
+{
+	"variables": [],
+	"info": {
+		"name": "sftp-demo",
+		"_postman_id": "a5e39427-da9c-7129-2cec-7a520683ec8a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sftp-upload",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8180/sftp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"sftp"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"equals": false,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,20 @@
+server:
+  port: 8180
+
+sftp:
+  host: localhost
+  port: 24022
+  username: atmoz
+  password: atmoz124
+  directory:
+    localFolder: "files"
+    root: "/atmoz"
+  save:
+    dateformat: "yyyy.MM.dd.HH.mm.ss.SSSS"
+  active: true
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 200MB
+      max-file-size: 200MB
