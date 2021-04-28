@@ -29,6 +29,13 @@ public class StfpGatewayImpl implements SftpGateway {
     @Override
     public void downloadFile(String filename) {
 
+//        Session session = factoryHandler.gimmeFactory().getSession();
+//
+//        InputStream data;
+//
+//        try {
+//            mkDirGateway.createDirectories();
+//        }
 
 
 
@@ -40,6 +47,8 @@ public class StfpGatewayImpl implements SftpGateway {
         String localPath =  LocalPaths.getSyncPath() + LocalPaths.getOSSeparator() + filePart.getOriginalFilename();
 
         try {
+            mkDirGateway.createDirectories();
+
             filePart.transferTo(Paths.get(localPath));
             return new File(localPath);
         } catch (IOException e) {
